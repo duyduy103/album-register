@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Music Store</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background: #f5f5f5;
+                color: #222;
+                min-height: 100vh;
+            }
+
+            /* Header */
+            .header {
+                background: #222;
+                color: white;
+                padding: 25px 0;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            }
+
+            .header-content {
+                width: 900px;
+                max-width: 90%;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                font-size: 26px;
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+
+            .subtitle {
+                font-size: 14px;
+                color: #bbb;
+            }
+
+            /* Main */
+            .container {
+                width: 900px;
+                max-width: 90%;
+                margin: 50px auto;
+            }
+
+            .page-title {
+                margin-bottom: 10px;
+                font-size: 30px;
+            }
+
+            .description {
+                color: #777;
+                margin-bottom: 30px;
+            }
+
+            /* Album list */
+            .album-list {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .album {
+                display: block;
+                background: white;
+                padding: 25px;
+                border-radius: 12px;
+                text-decoration: none;
+                color: #222;
+                border: 1px solid #e5e5e5;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+                transition: all 0.25s ease;
+            }
+
+            .album:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+                border-color: #999;
+            }
+
+            .album-number {
+                font-size: 13px;
+                color: #888;
+                margin-bottom: 12px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            .album-title {
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 1.4;
+                margin-bottom: 15px;
+            }
+
+            .download {
+                font-size: 14px;
+                color: #555;
+            }
+
+            .arrow {
+                float: right;
+                font-size: 20px;
+                color: #888;
+                transition: 0.2s;
+            }
+
+            .album:hover .arrow {
+                transform: translateX(5px);
+                color: #222;
+            }
+
+            /* Sign out */
+            .signout-container {
+                text-align: center;
+                margin-top: 40px;
+            }
+
+            .signout {
+                display: inline-block;
+                padding: 11px 28px;
+                background: #222;
+                color: white;
+                text-decoration: none;
+                border-radius: 6px;
+                font-size: 14px;
+                transition: 0.2s;
+            }
+
+            .signout:hover {
+                background: #444;
+            }
+
+            /* Footer */
+            .footer {
+                text-align: center;
+                color: #999;
+                font-size: 13px;
+                margin: 50px 0 25px;
+            }
+
+            /* Responsive */
+            @media (max-width: 700px) {
+                .album-list {
+                    grid-template-columns: 1fr;
+                }
+
+                .header-content {
+                    flex-direction: column;
+                    gap: 8px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">Music Store</div>
+                <div class="subtitle">Digital Album Download</div>
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <main class="container">
+
+            <h1 class="page-title">Available Albums</h1>
+
+            <p class="description">
+                Choose an album below to continue with the download.
+            </p>
+
+            <div class="album-list">
+
+                <a class="album"
+                   href="download?action=checkUser&amp;productCode=8601">
+
+                    <div class="album-number">
+                        Album 01
+                    </div>
+
+                    <div class="album-title">
+                        HVL album - MCK
+                    </div>
+
+                    <div class="download">
+                        Product code: 8601
+                        <span class="arrow">→</span>
+                    </div>
+
+                </a>
+
+
+                <a class="album"
+                   href="download?action=checkUser&amp;productCode=pf01">
+
+                    <div class="album-number">
+                        Album 02
+                    </div>
+
+                    <div class="album-title">
+                        Bittersweet EP - KIMLONG
+                    </div>
+
+                    <div class="download">
+                        Product code: pf01
+                        <span class="arrow">→</span>
+                    </div>
+
+                </a>
+
+
+                <a class="album"
+                   href="download?action=checkUser&amp;productCode=pf02">
+
+                    <div class="album-number">
+                        Album 03
+                    </div>
+
+                    <div class="album-title">
+                        Tinh hà say hi
+                    </div>
+
+                    <div class="download">
+                        Product code: pf02
+                        <span class="arrow">→</span>
+                    </div>
+
+                </a>
+
+
+                <a class="album"
+                   href="download?action=checkUser&amp;productCode=jr01">
+
+                    <div class="album-number">
+                        Album 04
+                    </div>
+
+                    <div class="album-title">
+                        THE WXRDIES - wxrdies
+                    </div>
+
+                    <div class="download">
+                        Product code: jr01
+                        <span class="arrow">→</span>
+                    </div>
+
+                </a>
+
+            </div>
+
+
+        </main>
+
+        <footer class="footer">
+            Music Store &copy; 2026
+        </footer>
+
+    </body>
+</html>
